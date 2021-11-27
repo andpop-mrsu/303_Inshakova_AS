@@ -56,8 +56,8 @@ if( isset( $_POST['employeeId'] ) ):
             emp.id AS 'Master id', 
             emp.surname || ' ' || emp.name || ' ' || emp.patronymic AS 'Surname Name Patronymic',
             wa.date_of_recording AS 'Work date',
-            serv.service_name AS 'Услуга',
-            serv.price AS 'Стоимость'
+            serv.service_name AS 'Service',
+            serv.price AS 'Price'
         FROM work_accounting AS wa
         INNER JOIN employees AS emp ON wa.id_employees = emp.id
         INNER JOIN service AS serv ON wa.id_service = serv.id
