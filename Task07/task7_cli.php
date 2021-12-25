@@ -5,9 +5,9 @@ require_once('./includes/services.php');
 require_once('./includes/employee_validation.php');
 
 try {
-    $pdo = new PDO('sqlite:./data/salon.db');
+    $pdo = new PDO('sqlite:data/salon.db');
 
-    $list_of_all_employee_query = "
+    $list_of_all_employee_query = "task
         SELECT
             emp.id AS 'Master id', 
             emp.surname || ' ' || emp.name || ' ' || emp.patronymic AS 'Surname Name Patronymic'

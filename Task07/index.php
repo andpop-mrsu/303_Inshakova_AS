@@ -6,7 +6,7 @@ function get_array_of_employee_numbers( $rows ){
     return $array;
 }
 
-$pdo = new PDO('sqlite:../data/salon.db');
+$pdo = new PDO('sqlite:data/salon.db');
 
 $list_of_all_employee_query = "
     SELECT
